@@ -242,7 +242,7 @@ public:
 	}
 
 	//if node is not found returns 0, else returns 1
-	bool removeNote(keyType key) {
+	bool removeNode(keyType key) {
 		Node* nodeToBeDeleted = findNode(key);
 		if (nodeToBeDeleted == NULL) //if nodeToBeDeleted is not found
 			return 0;

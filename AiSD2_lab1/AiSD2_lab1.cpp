@@ -20,13 +20,13 @@ int main(){
 	std::cout << std::endl;
 
 	std::cout << "deleting a note with key 1..." << std::endl;
-	map.removeNote(1);
+	map.removeNode(1);
 	std::cout << "my map: " << std::endl;
 	map.print();
 	std::cout << std::endl;
 
 	std::cout << "deleting a note with key 3..." << std::endl;
-	map.removeNote(3);
+	map.removeNode(3);
 	map.print();
 	std::cout << std::endl;
 

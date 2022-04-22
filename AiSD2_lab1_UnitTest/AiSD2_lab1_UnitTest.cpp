@@ -36,19 +36,19 @@ namespace AiSD2lab1UnitTest{
 			Assert::IsTrue(map.findNode(3));
 			Assert::IsFalse(map.findNode(8));
 
-			map.removeNote(3);
+			map.removeNode(3);
 			Assert::IsTrue(map.findNode(1));
 			Assert::IsTrue(map.findNode(2));
 			Assert::IsFalse(map.findNode(3));
 			Assert::IsFalse(map.findNode(8));
 
-			map.removeNote(2);
+			map.removeNode(2);
 			Assert::IsTrue(map.findNode(1));
 			Assert::IsFalse(map.findNode(2));
 			Assert::IsFalse(map.findNode(3));
 			Assert::IsFalse(map.findNode(8));
 
-			map.removeNote(1);
+			map.removeNode(1);
 			Assert::IsFalse(map.findNode(1));
 			Assert::IsFalse(map.findNode(2));
 			Assert::IsFalse(map.findNode(3));
@@ -122,7 +122,7 @@ namespace AiSD2lab1UnitTest{
 			Assert::IsTrue(vec[0] == 33 || vec[1] == 33 || vec[2] == 33);
 		}
 
-		TEST_METHOD(removeNoteTest){
+		TEST_METHOD(removeNodeTest){
 			Map<int, int> map;
 
 
@@ -130,19 +130,19 @@ namespace AiSD2lab1UnitTest{
 			map.insert(2, 22);
 			map.insert(3, 33);
 
-			map.removeNote(3);
+			map.removeNode(3);
 			Assert::IsTrue(map.findNode(1));
 			Assert::IsTrue(map.findNode(2));
 			Assert::IsFalse(map.findNode(3));
 			Assert::IsFalse(map.findNode(8));
 
-			map.removeNote(2);
+			map.removeNode(2);
 			Assert::IsTrue(map.findNode(1));
 			Assert::IsFalse(map.findNode(2));
 			Assert::IsFalse(map.findNode(3));
 			Assert::IsFalse(map.findNode(8));
 
-			map.removeNote(1);
+			map.removeNode(1);
 			Assert::IsFalse(map.findNode(1));
 			Assert::IsFalse(map.findNode(2));
 			Assert::IsFalse(map.findNode(3));
