@@ -1,10 +1,13 @@
 
 #include <iostream>
 #include "Map.h"
+#include "List.h"
 
 int main(){
 
+
 	Map<int, int> map;
+
 
 	map.insert(1, 11);
 	map.insert(2, 22);
@@ -31,15 +34,15 @@ int main(){
 	std::cout << std::endl;
 
 	std::cout << "vector of the keys: " << std::endl;
-	std::vector<int> getKeys = map.getKeys();
-	for (int i = 0; i < getKeys.size(); i++)
-		std::cout << getKeys[i] << " ";
+	List <int> getKeys = map.getKeys();
+	for (int i = 0; i < getKeys.get_size(); i++)
+		std::cout << getKeys.at(i) << " ";
 	std::cout << std::endl << std::endl;
 	
 	std::cout << "vector of the values: " << std::endl;
-	std::vector<int> getValue = map.getValues();
-	for (int i = 0; i < getValue.size(); i++)
-		std::cout << getValue[i] << " ";
+	List <int> getValue = map.getValues();
+	for (int i = 0; i < getValue.get_size(); i++)
+		std::cout << getValue.at(i) << " ";
 	std::cout << std::endl<< std::endl;
 
 	std::cout << "clearing map... " << std::endl;

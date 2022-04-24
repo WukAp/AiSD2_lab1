@@ -102,11 +102,11 @@ namespace AiSD2lab1UnitTest{
 			map.insert(1, 11);
 			map.insert(2, 22);
 			map.insert(3, 33);
-			std::vector<int> vec = map.getKeys();
+			List <int> list = map.getKeys();
 
-			Assert::IsTrue(vec[0] == 1 || vec[1] == 1 || vec[2] == 1);
-			Assert::IsTrue(vec[0] == 2 || vec[1] == 2 || vec[2] == 2);
-			Assert::IsTrue(vec[0] == 3 || vec[1] == 3 || vec[2] == 3);
+			Assert::IsTrue(list.at(0) == 1 || list.at(1) == 1 || list.at(2) == 1);
+			Assert::IsTrue(list.at(0) == 2 || list.at(1) == 2 || list.at(2) == 2);
+			Assert::IsTrue(list.at(0) == 3 || list.at(1) == 3 || list.at(2) == 3);
 		}
 
 		TEST_METHOD(getValuesTest){
@@ -115,11 +115,11 @@ namespace AiSD2lab1UnitTest{
 			map.insert(1, 11);
 			map.insert(2, 22);
 			map.insert(3, 33);
-			std::vector<int> vec = map.getValues();
+			List<int> list = map.getValues();
 
-			Assert::IsTrue(vec[0] == 11 || vec[1] == 11 || vec[2] == 11);
-			Assert::IsTrue(vec[0] == 22 || vec[1] == 22 || vec[2] == 22);
-			Assert::IsTrue(vec[0] == 33 || vec[1] == 33 || vec[2] == 33);
+			Assert::IsTrue(list.at(0) == 11 || list.at(1) == 11 || list.at(2) == 11);
+			Assert::IsTrue(list.at(0) == 22 || list.at(1) == 22 || list.at(2) == 22);
+			Assert::IsTrue(list.at(0) == 33 || list.at(1) == 33 || list.at(2) == 33);
 		}
 
 		TEST_METHOD(removeNodeTest){

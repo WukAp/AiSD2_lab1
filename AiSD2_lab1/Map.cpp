@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include "List.h"
 
 template<typename keyType, typename valueType>
 
@@ -91,25 +91,25 @@ private:
 		}		
 	}
 
-	std::vector<keyType> getKeysHelper(Node* node, std::vector<keyType> vec) {
+	List<keyType> getKeysHelper(Node* node, List<keyType> list) {
 		if (node != nil) {
 			if (node->right != NULL && node->right != nil)
-				vec = getKeysHelper(node->right, vec);
+				list = getKeysHelper(node->right, list);
 			if (node->left != NULL && node->left != nil)
-				vec = getKeysHelper(node->left, vec);
-			vec.push_back(node->key);
-			return vec;
+				list = getKeysHelper(node->left, list);
+			list.push_back(node->key);
+			return list;
 		}
 	}
 	
-	std::vector<valueType> getValuesHelper(Node* node, std::vector<valueType> vec) {
+	List<valueType> getValuesHelper(Node* node, List<valueType> list) {
 		if (node != nil) {
 			if (node->right != NULL && node->right != nil)
-				vec = getValuesHelper(node->right, vec);
+				list = getValuesHelper(node->right, list);
 			if (node->left != NULL && node->left != nil)
-				vec = getValuesHelper(node->left, vec);
-			vec.push_back(node->value);
-			return vec;
+				list = getValuesHelper(node->left, list);
+			list.push_back(node->value);
+			return list;
 		}
 	}
 
@@ -206,14 +206,14 @@ public:
 		this->root = nil;
 	}
 
-	std::vector<keyType> getKeys() {
-		std::vector<keyType> vec;
-		return getKeysHelper(this->root, vec);
+	List <keyType> getKeys() {
+		List<keyType> list;
+		return getKeysHelper(this->root, list);
 	}
 
-	std::vector<valueType> getValues() {
-		std::vector<valueType> vec;
-		return getValuesHelper(this->root, vec);
+	List <valueType> getValues() {
+		List <valueType> list;
+		return getValuesHelper(this->root, list);
 	}
 
 	void print() {
